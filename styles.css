@@ -435,6 +435,32 @@ body {
     margin-bottom: 16px;
 }
 
+
+.excursion-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(212, 175, 55, 0.12);
+    border: 2px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50%;
+
+    color: #D4AF37;
+    font-size: 30px;
+
+    transition: all 0.3s ease;
+}
+
+.excursion-card:hover .excursion-icon {
+    background: #D4AF37;
+    color: #fff;
+    transform: scale(1.08);
+}
+
 .excursion-card h4 {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
