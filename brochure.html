@@ -80,10 +80,10 @@
             font-size: 1rem;
         }
         .cover-content .divider {
-            width: 60px;
+            width: 50px;
             height: 2px;
             background: var(--gold);
-            margin: 20px auto;
+            margin: 14px auto;
         }
         .cover-content .location {
             font-size: 0.85rem;
@@ -93,7 +93,7 @@
 
         /* === INNER PAGES === */
         .inner-page {
-            padding: 28mm 20mm;
+            padding: 18mm 18mm;
             page-break-after: always;
         }
         .inner-page:last-child {
@@ -102,22 +102,22 @@
 
         .page-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             color: var(--dark-brown);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .page-title-bar {
-            width: 40px;
-            height: 3px;
+            width: 36px;
+            height: 2px;
             background: var(--gold);
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
         .content-text {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text);
-            line-height: 1.65;
-            margin-bottom: 12px;
+            line-height: 1.55;
+            margin-bottom: 8px;
         }
         .content-text.light {
             color: var(--text-light);
@@ -126,8 +126,8 @@
         /* Photo layouts */
         .photos-row {
             display: grid;
-            gap: 6px;
-            margin: 14px 0;
+            gap: 5px;
+            margin: 8px 0;
         }
         .photos-3 { grid-template-columns: repeat(3, 1fr); }
         .photos-2 { grid-template-columns: repeat(2, 1fr); }
@@ -135,51 +135,51 @@
 
         .photos-row img {
             width: 100%;
-            height: 110px;
+            height: 100px;
             object-fit: cover;
             border-radius: 3px;
         }
-        .photos-row.tall img { height: 140px; }
-        .photos-row.short img { height: 85px; }
+        .photos-row.tall img { height: 120px; }
+        .photos-row.short img { height: 75px; }
 
         /* Section divider */
         .section-gap {
-            height: 20px;
+            height: 14px;
         }
         .section-gap-sm {
-            height: 12px;
+            height: 8px;
         }
 
         /* Itinerary */
         .itinerary {
-            margin: 12px 0;
+            margin: 8px 0;
         }
         .itinerary-item {
             display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 6px;
             page-break-inside: avoid;
         }
         .itinerary-num {
-            min-width: 22px;
-            height: 22px;
+            min-width: 20px;
+            height: 20px;
             background: var(--gold);
             color: #fff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             margin-top: 2px;
         }
         .itinerary-text h4 {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--dark-brown);
             margin-bottom: 1px;
         }
         .itinerary-text p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-light);
             line-height: 1.4;
         }
@@ -189,25 +189,25 @@
             background: var(--cream);
             border: 1px solid rgba(212,175,55,0.25);
             border-radius: 6px;
-            padding: 16px 18px;
-            margin-top: 14px;
+            padding: 12px 14px;
+            margin-top: 10px;
             page-break-inside: avoid;
         }
         .package-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: var(--dark-brown);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         .package-list {
             list-style: none;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4px 16px;
+            gap: 3px 14px;
         }
         .package-list li {
-            font-size: 0.8rem;
-            padding-left: 14px;
+            font-size: 0.75rem;
+            padding-left: 12px;
             position: relative;
             color: var(--text);
         }
@@ -222,46 +222,46 @@
         /* Badges */
         .badges {
             display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 6px;
+            margin-bottom: 8px;
         }
         .badge {
-            padding: 4px 12px;
+            padding: 3px 10px;
             background: rgba(212,175,55,0.08);
             border: 1px solid rgba(212,175,55,0.3);
-            border-radius: 14px;
-            font-size: 0.72rem;
+            border-radius: 12px;
+            font-size: 0.68rem;
             font-weight: 600;
             color: var(--dark-brown);
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
 
         /* Contact footer */
         .contact-footer {
             background: var(--dark-brown);
             color: #fff;
-            padding: 24px;
+            padding: 18px 20px;
             text-align: center;
             page-break-inside: avoid;
-            margin-top: 20px;
+            margin-top: 14px;
         }
         .contact-footer h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.15rem;
-            margin-bottom: 10px;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
         }
         .contact-footer p {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             opacity: 0.9;
-            margin-bottom: 3px;
-            line-height: 1.5;
+            margin-bottom: 2px;
+            line-height: 1.4;
         }
         .contact-footer .gold { color: var(--gold-light); }
         .contact-footer .divider {
-            width: 40px;
+            width: 30px;
             height: 1px;
             background: var(--gold);
-            margin: 12px auto;
+            margin: 8px auto;
             opacity: 0.6;
         }
 
@@ -383,22 +383,78 @@
             </div>
         </div>
 
-        <!-- PAGE 3: CYCLING + JEEP SAFARI -->
+        <!-- PAGE 3: HORSE SAFARI -->
         <div class="inner-page">
-            <h2 class="page-title">Countryside Cycling</h2>
+            <h2 class="page-title">Bijaipur Horse Safari</h2>
             <div class="page-title-bar"></div>
-            <p class="content-text">Pedal through the picturesque countryside of Bijaipur on our guided cycling tours. The routes take you past ancient temples, vibrant villages, and sweeping farmlands — offering a unique perspective of rural Rajasthan that few travelers get to witness. Suitable for all fitness levels with multiple route options available.</p>
+            <p class="content-text">Established in the late eighties by the owners of Castle Bijaipur, the Bijaipur Horse Safari offers exclusive horseback holidays through the countryside of South Rajasthan (Mewar). From humble safari tents under the starlit sky to the sophisticated comforts of Castles — quality horseback riding services with expert guides through India's heartland.</p>
 
-            <div class="photos-row photos-2 tall">
-                <img src="cycling/lucid-origin_Create_an_ultra-realistic_luxury_adventure_tourism_photograph_showing_guests_cyc-0.jpg" alt="Cycling tour">
-                <img src="cycling/nano-banana-2_Create_an_ultra-realistic_luxury_adventure_tourism_photograph_showing_guests_cyc-0.jpg" alt="Countryside cycling">
+            <div class="photos-row photos-3 tall">
+                <img src="horse-safari/horse-safari-7-8-08-161.JPG.jpeg" alt="Horse Safari">
+                <img src="horse-safari/DSC_5651.jpg.jpeg" alt="Horseback riding">
+                <img src="horse-safari/Day5-(2).JPG.jpeg" alt="Safari camp">
+            </div>
+            <div class="photos-row photos-3">
+                <img src="horse-safari/Day6-(2).JPG.jpeg" alt="Horse ride">
+                <img src="horse-safari/Evening-Athana-Krishna-Palace-(2).jpg.jpeg" alt="Evening halt">
+                <img src="horse-safari/587916547_18383767672194319_1388392518621738535_n.jpg" alt="Horseback holiday">
             </div>
 
-            <div class="section-gap"></div>
+            <div class="section-gap-sm"></div>
 
+            <p class="content-text" style="font-weight:600; color: var(--dark-brown);">Sample Itinerary — Beginner Style (9 Days)</p>
+
+            <div class="itinerary">
+                <div class="itinerary-item">
+                    <div class="itinerary-num">1</div>
+                    <div class="itinerary-text">
+                        <h4>Day 01: Arrive Bijaipur</h4>
+                        <p>Arrive before lunch. Traditional welcome. Evening: first ride (2-hr local ride or lesson in castle grounds). Dinner &amp; overnight at Castle Bijaipur (360-year-old Heritage Hotel).</p>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-num">2</div>
+                    <div class="itinerary-text">
+                        <h4>Day 02–04: Riding Lessons &amp; Fun</h4>
+                        <p>Ride mornings &amp; evenings, free afternoons. Expert guides for beginners; experienced riders go further afield. Afternoons: cycling, cooking, massage, pool. Dine under the stars. Village tours in vintage jeeps.</p>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-num">3</div>
+                    <div class="itinerary-text">
+                        <h4>Day 05: Bijaipur → Motipura (20 km, 5–6 hrs)</h4>
+                        <p>Through Eastern Highlands with lush fields amidst hills. Lunch at Damru. Ride through Guner flatlands. Overnight in Mughal-style safari tents at Motipura Lake.</p>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-num">4</div>
+                    <div class="itinerary-text">
+                        <h4>Day 06: Motipura → Pangarh (21 km, 7 hrs)</h4>
+                        <p>Ride south through least inhabited area. Lunch at old Rawat lake. Forests, deserted village of Bhagwanpura. Pangarh Lake — 1000-year-old manmade lake, fort ruins, temples, birdwatcher's paradise. Overnight at Pangarh Lake Retreat.</p>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-num">5</div>
+                    <div class="itinerary-text">
+                        <h4>Day 07: Pangarh → Bijaipur (23 km, 6 hrs)</h4>
+                        <p>Through valleys moving north. Amazing riding grounds. Lunch near Modia village. Evening arrival at Castle Bijaipur.</p>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-num">6</div>
+                    <div class="itinerary-text">
+                        <h4>Day 08–09: Rest &amp; Departure</h4>
+                        <p>Day 08: Relax &amp; rejuvenate at Castle. Day 09: Depart. Complimentary transfers to Chittor Station or Udaipur Airport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 4: JEEP SAFARI -->
+        <div class="inner-page">
             <h2 class="page-title">Jeep Safari Adventure</h2>
             <div class="page-title-bar"></div>
-            <p class="content-text">Embark on an exhilarating jeep safari through the rugged terrain of the Vindhya Valley. Our experienced guides navigate you through dense forests, open plains, and rocky trails. Spot wildlife in their natural habitat, traverse ancient pathways, and witness breathtaking sunsets from vantage points accessible only by 4x4.</p>
+            <p class="content-text">Embark on an exhilarating jeep safari through the rugged terrain of the Vindhya Valley. Spot wildlife, traverse forest trails, and witness breathtaking sunsets from vantage points accessible only by 4x4.</p>
 
             <div class="photos-row photos-3 tall">
                 <img src="jeep-safari/205-(2).JPG.jpeg" alt="Jeep Safari">
@@ -411,33 +467,28 @@
             </div>
         </div>
 
-        <!-- PAGE 4: TREKKING + YOGA -->
+        <!-- PAGE 5: TREKKING/BIRD WATCHING + YOGA -->
         <div class="inner-page">
-            <h2 class="page-title">Trekking &amp; Nature Walks</h2>
+            <h2 class="page-title">Trekking &amp; Bird Watching</h2>
             <div class="page-title-bar"></div>
-            <p class="content-text">Explore the untouched wilderness on foot. Our guided treks take you through ancient forests, along mountain ridges, and past hidden streams — revealing the raw beauty of rural Rajasthan that remains unchanged for centuries. Each trek is tailored to the group's pace, with options ranging from gentle nature walks to full-day expeditions through the Vindhya hills.</p>
+            <p class="content-text">Explore the untouched wilderness on foot. Our guided treks take you through ancient forests, along mountain ridges, and past hidden streams. Each trek is tailored to the group's pace, from gentle nature walks to full-day expeditions through the Vindhya hills.</p>
 
             <div class="photos-row photos-3 tall">
-                <img src="tracking/Day6-morning-Sitamata-Camp.JPG.jpeg" alt="Sitamata Camp">
-                <img src="tracking/DSC_5651.jpg.jpeg" alt="Forest trail">
-                <img src="tracking/DSC_5689.jpg.jpeg" alt="Mountain view">
+                <img src="tracking/654567976_18399055765194319_1196093694909418985_n.jpg" alt="Trekking">
+                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM.jpeg" alt="Guided trek">
+                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(1).jpeg" alt="Nature walk">
             </div>
             <div class="photos-row photos-3">
-                <img src="tracking/587916547_18383767672194319_1388392518621738535_n.jpg" alt="Trek adventure">
-                <img src="tracking/640271135_18395641447194319_4662891741707230919_n.jpg" alt="Nature walk">
-                <img src="tracking/654567976_18399055765194319_1196093694909418985_n.jpg" alt="Countryside trek">
-            </div>
-            <div class="photos-row photos-3 short">
-                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM.jpeg" alt="Guided trek">
-                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(1).jpeg" alt="Village path">
-                <img src="tracking/642503174_18396393007194319_4955481821749973904_n.jpg" alt="Trail exploration">
+                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(2).jpeg" alt="Forest trail">
+                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(3).jpeg" alt="Countryside trek">
+                <img src="tracking/WhatsApp-Image-2026-07-11-at-8.35.04-PM.jpeg" alt="Bird watching">
             </div>
 
-            <div class="section-gap"></div>
+            <div class="section-gap-sm"></div>
 
             <h2 class="page-title">Yoga &amp; Meditation</h2>
             <div class="page-title-bar"></div>
-            <p class="content-text">Begin your mornings with guided yoga and meditation sessions amidst the serenity of the palace grounds. Our experienced instructors offer sessions for all levels — from gentle stretches to advanced asanas. The tranquil setting of the castle gardens provides the perfect backdrop for mindfulness and rejuvenation.</p>
+            <p class="content-text">Guided yoga and meditation sessions amidst the serenity of the palace grounds. Sessions for all levels in the tranquil castle gardens.</p>
 
             <div class="photos-row photos-3">
                 <img src="yoga-meditation/yoga.jpg" alt="Yoga session">
@@ -446,59 +497,41 @@
             </div>
         </div>
 
-        <!-- PAGE 5: EXCURSION + CONTACT -->
+        <!-- PAGE 6: VILLAGE EXCURSION + CONTACT -->
         <div class="inner-page">
             <h2 class="page-title">Village &amp; Pangarh Excursion</h2>
             <div class="page-title-bar"></div>
-            <p class="content-text">A full-day immersive experience through the heart of traditional Rajasthan. Walk through living villages, witness ancient farming practices, and journey through the scenic Vindhya Valley forest to the serene Pangarh Lake.</p>
+            <p class="content-text">A full-day walking safari through traditional Rajasthan — part of our Trekking &amp; Bird Watching experiences.</p>
 
-            <div class="badges">
-                <span class="badge">Full Day Experience</span>
-                <span class="badge">4–5 Hours Walking Safari</span>
-                <span class="badge">Min. 6 Guests</span>
-            </div>
+
 
             <div class="itinerary">
                 <div class="itinerary-item">
                     <div class="itinerary-num">1</div>
                     <div class="itinerary-text">
                         <h4>Departure</h4>
-                        <p>Bus or own vehicle departure from Rawat Ka Talab. Hotel staff and driver accompany the group throughout.</p>
+                        <p>Bus/own vehicle from Rawat Ka Talab with hotel staff.</p>
                     </div>
                 </div>
                 <div class="itinerary-item">
                     <div class="itinerary-num">2</div>
                     <div class="itinerary-text">
                         <h4>Village Visit</h4>
-                        <p>Explore a traditional village with agricultural fields and farms. This region is known for opium cultivation — viewable during harvest season (December to January), subject to availability.</p>
+                        <p>Traditional village, farms. Opium farming viewable Dec–Jan.</p>
                     </div>
                 </div>
                 <div class="itinerary-item">
                     <div class="itinerary-num">3</div>
                     <div class="itinerary-text">
-                        <h4>Village School</h4>
-                        <p>Visit a local village school if timing and permission allow (subject to school hours).</p>
+                        <h4>Walking Safari</h4>
+                        <p>4–5 hours on foot through landscapes. School visit if timing permits.</p>
                     </div>
                 </div>
                 <div class="itinerary-item">
                     <div class="itinerary-num">4</div>
                     <div class="itinerary-text">
-                        <h4>Walking Safari</h4>
-                        <p>4–5 hours on foot and by track through natural surroundings, village landscapes, and forest trails.</p>
-                    </div>
-                </div>
-                <div class="itinerary-item">
-                    <div class="itinerary-num">5</div>
-                    <div class="itinerary-text">
-                        <h4>Pangarh Visit</h4>
-                        <p>Journey through Vindhya Valley forest to Pangarh. Enjoy lunch at Pangarh (if arranged) or visit Pangarh Lake followed by high tea.</p>
-                    </div>
-                </div>
-                <div class="itinerary-item">
-                    <div class="itinerary-num">6</div>
-                    <div class="itinerary-text">
-                        <h4>Return Journey</h4>
-                        <p>Drive to Bijaipur by bus or cab. Hotel jeep, staff, and driver join and assist the group.</p>
+                        <h4>Pangarh &amp; Return</h4>
+                        <p>Vindhya Valley forest to Pangarh Lake. High tea or lunch. Return to Bijaipur.</p>
                     </div>
                 </div>
             </div>
@@ -511,16 +544,15 @@
                     <li>Hotel staff assistance</li>
                     <li>Dedicated driver</li>
                     <li>High tea included</li>
-                    <li>Optional lunch (additional cost)</li>
+                    <li>Optional lunch (extra cost)</li>
                 </ul>
             </div>
 
             <div class="contact-footer">
                 <h3>Castle Bijaipur</h3>
-                <p>Village/Post – Bijaipur, Via – Bassi, District – Chittorgarh</p>
-                <p>Rajasthan - 312001, India</p>
+                <p>Village/Post – Bijaipur, Via – Bassi, District – Chittorgarh, Rajasthan - 312001</p>
                 <div class="divider"></div>
-                <p class="gold"><strong>Mobile:</strong> +91 94611 41153 | +91 94603 34734</p>
+                <p class="gold"><strong>Mobile:</strong> +91 9461141153 | +91 94603 34734</p>
                 <p class="gold"><strong>Reservations:</strong> +91 9461141153</p>
                 <p class="gold"><strong>Email:</strong> hpratapp@hotmail.com | hcbsales@gmail.com</p>
                 <div class="divider"></div>
