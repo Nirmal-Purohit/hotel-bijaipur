@@ -91,6 +91,14 @@ body {
     color: var(--gold);
 }
 
+.nav-brochure {
+    background: var(--gold);
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem !important;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -241,7 +249,7 @@ body {
     text-align: center;
     color: var(--text-light);
     font-size: 1.05rem;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -249,7 +257,7 @@ body {
 
 /* ===== ABOUT SECTION ===== */
 .about-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--cream);
 }
 
@@ -260,15 +268,15 @@ body {
 }
 
 .about-content p {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    margin-bottom: 20px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
     color: var(--text);
 }
 
 /* ===== EXPERIENCES / TABS ===== */
 .experiences-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--warm-white);
 }
 
@@ -277,7 +285,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .tab-btn {
@@ -360,7 +368,7 @@ body {
 
 /* ===== MASONRY GALLERY ===== */
 .gallery-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--cream);
 }
 
@@ -385,8 +393,8 @@ body {
 
 .load-more-btn {
     display: block;
-    margin: 48px auto 0;
-    padding: 14px 40px;
+    margin: 32px auto 0;
+    padding: 12px 36px;
     background: transparent;
     border: 2px solid var(--gold);
     color: var(--dark-brown);
@@ -406,52 +414,53 @@ body {
 
 /* ===== EXCURSION SECTION ===== */
 .excursion-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--warm-white);
+}
+
+.excursion-section .section-desc {
+    margin-bottom: 16px;
 }
 
 .excursion-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .excursion-card {
     background: #fff;
-    padding: 36px 24px;
+    padding: 32px 20px 24px;
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .excursion-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .excursion-icon {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
-}
-
-
-.excursion-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 20px;
-
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: rgba(212, 175, 55, 0.12);
     border: 2px solid rgba(212, 175, 55, 0.25);
     border-radius: 50%;
-
     color: #D4AF37;
-    font-size: 30px;
-
+    font-size: 24px;
+    margin-bottom: 16px;
     transition: all 0.3s ease;
 }
 
@@ -472,6 +481,180 @@ body {
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+/* Excursion Meta Badges */
+.excursion-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+}
+
+.meta-badge i {
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+/* Card Tap Hint */
+.card-tap-hint {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.excursion-card:hover .card-tap-hint {
+    opacity: 1;
+}
+
+.excursion-card {
+    cursor: pointer;
+}
+
+/* Excursion Detail Modal */
+.excursion-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: fadeIn 0.3s ease;
+}
+
+.excursion-modal.active {
+    display: flex;
+}
+
+.excursion-modal-content {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.excursion-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.excursion-modal-close:hover {
+    color: var(--dark-brown);
+}
+
+.excursion-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 32px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.excursion-modal-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.excursion-modal-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+}
+
+.excursion-modal-body {
+    padding: 24px 32px 32px;
+}
+
+.excursion-modal-body p {
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.excursion-modal-body .detail-highlight {
+    background: rgba(212, 175, 55, 0.08);
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    font-size: 0.95rem;
+    color: var(--dark-brown);
+}
+
+.excursion-modal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.excursion-modal-body li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.excursion-modal-body li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.excursion-modal-body .note {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* ===== PRICING BOX ===== */
@@ -550,14 +733,14 @@ body {
 
 /* ===== CONTACT SECTION ===== */
 .contact-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: var(--cream);
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 36px;
     align-items: center;
 }
 
@@ -735,7 +918,7 @@ body {
     }
 
     .excursion-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -750,5 +933,14 @@ body {
 
     .grid-gallery img {
         height: 180px;
+    }
+
+    .excursion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .excursion-meta {
+        flex-direction: column;
+        align-items: center;
     }
 }

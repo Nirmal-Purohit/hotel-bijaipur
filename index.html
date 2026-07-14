@@ -23,6 +23,7 @@
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#excursion">Excursion</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="brochure.html" class="nav-brochure">📄 Brochure</a></li>
             </ul>
         </div>
     </nav>
@@ -58,9 +59,9 @@
             <!-- Tab Navigation -->
             <div class="tabs">
                 <button class="tab-btn active" data-tab="cooking">Cooking Class</button>
-                <button class="tab-btn" data-tab="cycling">Cycling</button>
+                
                 <button class="tab-btn" data-tab="jeep">Jeep Safari</button>
-                <button class="tab-btn" data-tab="trekking">Trekking</button>
+                <button class="tab-btn" data-tab="trekking">Trekking/Bird Watching</button>
                 <button class="tab-btn" data-tab="yoga">Yoga &amp; Meditation</button>
             </div>
 
@@ -86,18 +87,7 @@
             </div>
 
             <!-- Tab Content: Cycling -->
-            <div class="tab-content" id="tab-cycling">
-                <div class="tab-info">
-                    <h3>Countryside Cycling</h3>
-                    <p>Pedal through the picturesque countryside of Bijaipur. Our guided cycling tours take you past ancient temples, vibrant villages, and sweeping farmlands — a perfect way to connect with the land.</p>
-                </div>
-                <div class="tab-gallery">
-                    <div class="grid-gallery">
-                        <img src="cycling/lucid-origin_Create_an_ultra-realistic_luxury_adventure_tourism_photograph_showing_guests_cyc-0.jpg" alt="Cycling through Bijaipur countryside" loading="lazy" onclick="openLightbox(this)">
-                        <img src="cycling/nano-banana-2_Create_an_ultra-realistic_luxury_adventure_tourism_photograph_showing_guests_cyc-0.jpg" alt="Guided cycling tour" loading="lazy" onclick="openLightbox(this)">
-                    </div>
-                </div>
-            </div>
+
 
             <!-- Tab Content: Jeep Safari -->
             <div class="tab-content" id="tab-jeep">
@@ -110,6 +100,9 @@
                         <img src="jeep-safari/205-(2).JPG.jpeg" alt="Jeep safari through Vindhya Valley" loading="lazy" onclick="openLightbox(this)">
                         <img src="jeep-safari/DSC_6059-(2).jpg.jpeg" alt="Wildlife spotting on safari" loading="lazy" onclick="openLightbox(this)">
                         <img src="jeep-safari/WhatsApp-Image-2026-07-11-at-8.44.05-PM-(18).jpeg" alt="Safari adventure" loading="lazy" onclick="openLightbox(this)">
+                        <img src="jeep-safari/627153016_18392574034194319_8340488425315106554_n.jpg" alt="Jeep safari trail" loading="lazy" onclick="openLightbox(this)">
+                        <img src="jeep-safari/621457575_18118156684596524_938463631589058270_n.webp" alt="Safari through the valley" loading="lazy" onclick="openLightbox(this)">
+                        
                     </div>
                 </div>
             </div>
@@ -117,7 +110,7 @@
             <!-- Tab Content: Trekking -->
             <div class="tab-content" id="tab-trekking">
                 <div class="tab-info">
-                    <h3>Trekking &amp; Nature Walks</h3>
+                    <h3>Trekking &amp; Bird Watching</h3>
                     <p>Explore the untouched wilderness on foot. Our guided treks take you through ancient forests, along mountain ridges, and past hidden waterfalls — revealing the raw beauty of rural Rajasthan.</p>
                 </div>
                 <div class="tab-gallery">
@@ -134,6 +127,10 @@
                         <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(1).jpeg" alt="Trek through village" loading="lazy" onclick="openLightbox(this)">
                         <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(2).jpeg" alt="Nature walk" loading="lazy" onclick="openLightbox(this)">
                         <img src="tracking/WhatsApp-Image-2026-07-11-at-8.33.08-PM-(3).jpeg" alt="Trail scenery" loading="lazy" onclick="openLightbox(this)">
+                        <img src="tracking/587916547_18383767672194319_1388392518621738535_n.jpg" alt="Trekking adventure" loading="lazy" onclick="openLightbox(this)">
+                        <img src="tracking/640271135_18395641447194319_4662891741707230919_n.jpg" alt="Forest trail exploration" loading="lazy" onclick="openLightbox(this)">
+                        <img src="tracking/642503174_18396393007194319_4955481821749973904_n.jpg" alt="Nature trek path" loading="lazy" onclick="openLightbox(this)">
+                        <img src="tracking/654567976_18399055765194319_1196093694909418985_n.jpg" alt="Countryside trekking" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -199,73 +196,81 @@
         <div class="container">
             <h2 class="section-title">Village &amp; Pangarh Excursion</h2>
             <p class="section-desc">A full-day immersive experience through traditional Rajasthan</p>
-            
+            <div class="excursion-meta">
+                <span class="meta-badge"><i class="fa-regular fa-clock"></i> Full Day (4–5 hrs safari)</span>
+                <span class="meta-badge"><i class="fa-solid fa-users"></i> Min. 6 Guests</span>
+            </div>
 
             <div class="excursion-grid">
-                <div class="excursion-card">
+                <div class="excursion-card" onclick="openExcursionDetail('departure')">
                     <div class="excursion-icon">
                         <i class="fa-solid fa-van-shuttle"></i>
                     </div>
                     <h4>Departure</h4>
                     <p>Tour begins with bus/own vehicle departure from Rawat Ka Talab</p>
+                    <span class="card-tap-hint">Tap for details</span>
                 </div>
 
-                <div class="excursion-card">
+                <div class="excursion-card" onclick="openExcursionDetail('village')">
                     <div class="excursion-icon">
                         <i class="fa-solid fa-house-chimney"></i>
                     </div>
                     <h4>Village Visit</h4>
-                    <p>Explore traditional villages, agricultural fields, and farms. Witness opium cultivation during season (Dec–Jan)</p>
+                    <p>Explore traditional villages, agricultural fields, and farms</p>
+                    <span class="card-tap-hint">Tap for details</span>
                 </div>
 
-                <div class="excursion-card">
+                <div class="excursion-card" onclick="openExcursionDetail('safari')">
                     <div class="excursion-icon">
                         <i class="fa-solid fa-person-hiking"></i>
                     </div>
                     <h4>Walking Safari</h4>
                     <p>4–5 hours on foot through natural surroundings and village landscapes</p>
+                    <span class="card-tap-hint">Tap for details</span>
                 </div>
 
-                <div class="excursion-card">
+                <div class="excursion-card" onclick="openExcursionDetail('pangarh')">
                     <div class="excursion-icon">
                         <i class="fa-solid fa-mountain-sun"></i>
                     </div>
                     <h4>Pangarh Visit</h4>
-                    <p>Journey through scenic Vindhya Valley forest to Pangarh Lake with high tea</p>
+                    <p>Journey through scenic Vindhya Valley forest to Pangarh Lake</p>
+                    <span class="card-tap-hint">Tap for details</span>
                 </div>
-            </div>
 
-            <div class="pricing-box">
-                <div class="pricing-header">
-                    <h3>Package Details</h3>
-                    <div class="price">&#8377; 1,200 <span>per person</span></div>
+                <div class="excursion-card" onclick="openExcursionDetail('return')">
+                    <div class="excursion-icon">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <h4>Return Journey</h4>
+                    <p>Drive back to Bijaipur by bus or cab with hotel staff assistance</p>
+                    <span class="card-tap-hint">Tap for details</span>
                 </div>
-                <div class="pricing-details">
-                    <div class="pricing-col">
-                        <h5>Includes</h5>
-                        <ul>
-                            <li>Bus transportation (or own vehicle)</li>
-                            <li>One backup vehicle</li>
-                            <li>Hotel staff assistance</li>
-                            <li>Dedicated driver</li>
-                            <li>High tea</li>
-                        </ul>
+
+                <div class="excursion-card" onclick="openExcursionDetail('package')">
+                    <div class="excursion-icon">
+                        <i class="fa-solid fa-gift"></i>
                     </div>
-                    <div class="pricing-col">
-                        <h5>Details</h5>
-                        <ul>
-                            <li>Duration: Full Day (4–5 hours safari)</li>
-                            <li>Minimum: 6 guests</li>
-                            <li>Optional lunch at Pangarh (additional cost)</li>
-                            <li>School visit subject to availability</li>
-                            <li>Hotel jeep &amp; staff join for return</li>
-                        </ul>
-                    </div>
+                    <h4>Package Includes</h4>
+                    <p>Transportation, backup vehicle, staff, driver &amp; high tea</p>
+                    <span class="card-tap-hint">Tap for details</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Excursion Detail Modal -->
+    <div class="excursion-modal" id="excursionModal">
+        <div class="excursion-modal-content">
+            <button class="excursion-modal-close" onclick="closeExcursionDetail()" aria-label="Close">&times;</button>
+            <div class="excursion-modal-header" id="excursionModalHeader">
+                <div class="excursion-modal-icon" id="excursionModalIcon"></div>
+                <h3 id="excursionModalTitle"></h3>
+            </div>
+            <div class="excursion-modal-body" id="excursionModalBody"></div>
+        </div>
+    </div>
+   
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
@@ -274,13 +279,13 @@
                 <div class="contact-info">
                     <h3>Castle Bijaipur</h3>
                     <p>Village/Post – Bijaipur, Via – Bassi, District – Chittorgarh<br>Rajasthan -312001, India</p>
-                    <p>Mob. No.: +91 95099 63925, +91 94141 11510</p>
-                    <p>Telephone - +91 1472 276351</p>
+                    <p>Mob. No.: +91 94611 41153, +91 94603 34734</p>
+            
                     <p>Email:hpratapp@hotmail.com, hcbsales@gmail.com</p>
                     <div class="contact-details">
                         <p><strong>For Reservations &amp; Inquiries</strong></p>
-                        <p>Mob. No.: +91 95099 63925, +91 9461141153</p>
-                        <p>Telephone: +91 1472 240099</p>
+                        <p>Mob. No.: +91 94611 41153</p>
+                      
                         <p>Email:hpratapp@hotmail.com, hcbsales@gmail.com</p>
                     </div>
                 </div>

@@ -182,3 +182,123 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ===== EXCURSION DETAIL MODAL =====
+const excursionDetails = {
+    departure: {
+        icon: '<i class="fa-solid fa-van-shuttle"></i>',
+        title: 'Departure',
+        body: `
+            <p>The tour begins with a <strong>bus / own vehicle departure from Rawat Ka Talab</strong>.</p>
+            <div class="detail-highlight">
+                <strong>Duration:</strong> Full Day<br>
+                <strong>Safari by walk and track:</strong> Approximately 4 to 5 hours
+            </div>
+            <p>The group assembles at the departure point and sets off towards the traditional villages of the Vindhya Valley region. Hotel staff and driver accompany the group throughout the journey.</p>
+            <p class="note">Minimum group size: 6 guests required for the excursion to proceed.</p>
+        `
+    },
+    village: {
+        icon: '<i class="fa-solid fa-house-chimney"></i>',
+        title: 'Village Visit',
+        body: `
+            <p>Upon arrival, guests will visit a <strong>traditional village</strong> and explore the surrounding agricultural fields and farms.</p>
+            <p>This region is well known for <strong>opium cultivation</strong>. During the opium harvesting season <strong>(December to the end of January)</strong>, guests may have the opportunity to observe opium farming activities, subject to seasonal availability.</p>
+            <div class="detail-highlight">
+                If the visit coincides with school hours and permission is available, the group will also visit a <strong>local village school</strong> (subject to school timings).
+            </div>
+            <p class="note">Village school visit is subject to availability and school schedule.</p>
+        `
+    },
+    safari: {
+        icon: '<i class="fa-solid fa-person-hiking"></i>',
+        title: 'Walking Safari',
+        body: `
+            <p>The safari experience will be conducted <strong>on foot and by track</strong>, covering the natural surroundings and village landscapes.</p>
+            <div class="detail-highlight">
+                <strong>Duration:</strong> Approximately 4 to 5 hours
+            </div>
+            <p>Guests will traverse through the scenic countryside, walking past farmlands, natural vegetation, and rural settlements. The pace is leisurely, allowing ample time to absorb the landscapes and interact with local life.</p>
+            <p>The journey then continues through the <strong>scenic Vindhya Valley forest area</strong> towards Pangarh.</p>
+        `
+    },
+    pangarh: {
+        icon: '<i class="fa-solid fa-mountain-sun"></i>',
+        title: 'Pangarh Visit',
+        body: `
+            <p>The journey continues through the <strong>scenic Vindhya Valley forest area</strong> towards Pangarh — a beautiful natural destination surrounded by hills and forest.</p>
+            <div class="detail-highlight">
+                <strong>If lunch is arranged:</strong> The group will enjoy lunch at Pangarh.<br><br>
+                <strong>If lunch is not included:</strong> The group will visit Pangarh Lake, followed by high tea.
+            </div>
+            <p>Pangarh offers stunning views of the lake and surrounding valley — a perfect spot to rest and rejuvenate after the walking safari.</p>
+            <p class="note">Lunch at Pangarh can be arranged at an additional cost.</p>
+        `
+    },
+    return: {
+        icon: '<i class="fa-solid fa-road"></i>',
+        title: 'Return Journey',
+        body: `
+            <p>After the visit, guests will drive to <strong>Bijaipur by bus or cab</strong>.</p>
+            <p>During the return journey:</p>
+            <ul>
+                <li>Hotel jeep accompanies the group</li>
+                <li>Hotel staff available for assistance</li>
+                <li>Dedicated driver for safe return</li>
+            </ul>
+            <p>The return drive offers scenic views of the valley as guests make their way back to the comfort of Castle Bijaipur.</p>
+        `
+    },
+    package: {
+        icon: '<i class="fa-solid fa-gift"></i>',
+        title: 'Package Details',
+        body: `
+            <div class="detail-highlight">
+                <strong>Minimum:</strong> 6 paying guests
+            </div>
+            <p><strong>Package includes:</strong></p>
+            <ul>
+                <li>Bus transportation (by own vehicle)</li>
+                <li>One backup vehicle</li>
+                <li>Hotel staff assistance</li>
+                <li>Dedicated driver</li>
+                <li>High tea</li>
+            </ul>
+            <p><strong>Optional:</strong></p>
+            <ul>
+                <li>Lunch at Pangarh (available at additional cost)</li>
+            </ul>
+            <p class="note">All guests are accompanied by hotel staff throughout the excursion for safety and comfort.</p>
+        `
+    }
+};
+
+function openExcursionDetail(key) {
+    const detail = excursionDetails[key];
+    if (!detail) return;
+
+    document.getElementById('excursionModalIcon').innerHTML = detail.icon;
+    document.getElementById('excursionModalTitle').textContent = detail.title;
+    document.getElementById('excursionModalBody').innerHTML = detail.body;
+    document.getElementById('excursionModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeExcursionDetail() {
+    document.getElementById('excursionModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close modal on backdrop click
+document.getElementById('excursionModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeExcursionDetail();
+    }
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('excursionModal').classList.contains('active')) {
+        closeExcursionDetail();
+    }
+});
